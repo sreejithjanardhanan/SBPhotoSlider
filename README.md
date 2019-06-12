@@ -29,21 +29,22 @@ The files needed to be included are in the **PhotoSlider** subfolder of this pro
 
 
         extension ViewController: SBPhotoSliderManagerDelegate {
-        func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, didCreatePageViewController viewController:     
-        UIPageViewController) {
-   
-             let pageViewController = viewController
-             self.addChild(pageViewController)
-             pageViewController.view.frame = self.view.frame
-            self.view.addSubview(pageViewController.view)
-            self.bringSubViewsToFront()
-          }
+        
+                  func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, 
+                    didCreatePageViewController viewController: UIPageViewController) {
+                        let pageViewController = viewController
+                        self.addChild(pageViewController)
+                        pageViewController.view.frame = self.view.frame
+                        self.view.addSubview(pageViewController.view)
+                        self.bringSubViewsToFront()
+                  }
     
-        func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, didFinishAnimatingPageViewController viewController: UIPageViewController, withCurrentIndex currentIndex: Int) {
-
-        self.aPageControl.currentPage = currentIndex
-        self.aMessageLabel.text = photoSliderManager.displayMessageAtIndex(currentIndex)
-         }
+                 func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, 
+          didFinishAnimatingPageViewController viewController: UIPageViewController, 
+                                withCurrentIndex currentIndex: Int) {
+                        self.aPageControl.currentPage = currentIndex
+                        self.aMessageLabel.text = photoSliderManager.displayMessageAtIndex(currentIndex)
+                }
         }
 
 
