@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="irh-i0-R6k">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="etp-CA-EGD">
+            <objects>
+                <viewController storyboardIdentifier="splashVC" id="irh-i0-R6k" customClass="ViewController" customModule="SBPhotoSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azq-fX-VRX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SB Studios" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-tT-gJ0">
+                                <rect key="frame" x="10" y="80" width="394" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.14138768330000001" blue="0.087481453170000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-iz-rtk">
+                                <rect key="frame" x="187.66666666666666" y="579" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ofy-iz-rtk" secondAttribute="height" multiplier="39:37" id="kuR-bh-3mk"/>
+                                </constraints>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-K1-eT1">
+                                <rect key="frame" x="127.00000000000001" y="128" width="160.33333333333337" height="34.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Asr-Ks-XDf" firstAttribute="trailing" secondItem="vfy-tT-gJ0" secondAttribute="trailing" constant="10" id="0br-v8-ZGt"/>
+                            <constraint firstItem="vfy-tT-gJ0" firstAttribute="top" secondItem="Asr-Ks-XDf" secondAttribute="top" constant="60" id="8sV-Pi-tNS"/>
+                            <constraint firstItem="WRf-K1-eT1" firstAttribute="top" secondItem="vfy-tT-gJ0" secondAttribute="bottom" constant="8" id="Ndn-3u-qOz"/>
+                            <constraint firstItem="WRf-K1-eT1" firstAttribute="centerX" secondItem="Asr-Ks-XDf" secondAttribute="centerX" id="Ph3-zu-lTg"/>
+                            <constraint firstItem="vfy-tT-gJ0" firstAttribute="leading" secondItem="Asr-Ks-XDf" secondAttribute="leading" constant="10" id="Xjw-GC-PC7"/>
+                            <constraint firstItem="Ofy-iz-rtk" firstAttribute="centerX" secondItem="Asr-Ks-XDf" secondAttribute="centerX" id="ruG-8Y-yNl"/>
+                            <constraint firstItem="Asr-Ks-XDf" firstAttribute="bottom" secondItem="Ofy-iz-rtk" secondAttribute="bottom" constant="120" id="sRz-Q4-Eam"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Asr-Ks-XDf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ny4-D3-gEz"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="aLogoLabel" destination="vfy-tT-gJ0" id="w98-OC-O9U"/>
+                        <outlet property="aMessageLabel" destination="WRf-K1-eT1" id="BCe-2G-lFq"/>
+                        <outlet property="aPageControl" destination="Ofy-iz-rtk" id="CCv-8h-2bc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEB-YK-6ek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423.1884057971015" y="130.43478260869566"/>
+        </scene>
+    </scenes>
+</document>

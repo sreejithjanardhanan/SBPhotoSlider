@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Slider View Controller-->
+        <scene sceneID="oXz-bf-gmR">
+            <objects>
+                <viewController storyboardIdentifier="contentVC" id="Y7q-FH-pkz" customClass="SBPhotoSliderViewController" customModule="SBPhotoSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kkE-mR-dWt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoSlider - Background First Image" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-FN-Dvm">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qoI-FN-Dvm" firstAttribute="top" secondItem="kgB-5C-TlX" secondAttribute="top" id="DNs-NU-8YM"/>
+                            <constraint firstItem="qoI-FN-Dvm" firstAttribute="leading" secondItem="kgB-5C-TlX" secondAttribute="leading" id="FnW-pM-6pe"/>
+                            <constraint firstItem="qoI-FN-Dvm" firstAttribute="bottom" secondItem="kgB-5C-TlX" secondAttribute="bottom" id="bBK-1a-bQb"/>
+                            <constraint firstItem="kgB-5C-TlX" firstAttribute="trailing" secondItem="qoI-FN-Dvm" secondAttribute="trailing" id="f6k-xf-E5I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kgB-5C-TlX"/>
+                    </view>
+                    <connections>
+                        <outlet property="backGroundImage" destination="qoI-FN-Dvm" id="upo-BV-Dhh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8K-Wn-H3t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1136" y="173"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="gRJ-ZL-t6K">
+            <objects>
+                <pageViewController storyboardIdentifier="pageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ETM-aG-717" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9Y-vj-m9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2003" y="173"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PhotoSlider - Background First Image" width="138" height="245.33332824707031"/>
+    </resources>
+</document>
