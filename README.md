@@ -27,21 +27,19 @@ The files needed to be included are in the **PhotoSlider** subfolder of this pro
 
 3. Implement delegate of photo slider manager
 
+
         extension ViewController: SBPhotoSliderManagerDelegate {
-        func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, didCreatePageViewController viewController:     UIPageViewController) {
-    
-   4. Create page view controller instance and add it in view
+        func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, didCreatePageViewController viewController:     
+        UIPageViewController) {
    
              let pageViewController = viewController
              self.addChild(pageViewController)
              pageViewController.view.frame = self.view.frame
             self.view.addSubview(pageViewController.view)
             self.bringSubViewsToFront()
-    }
+          }
     
         func photoSliderManager(_ photoSliderManager: SBPhotoSliderManager, didFinishAnimatingPageViewController viewController: UIPageViewController, withCurrentIndex currentIndex: Int) {
-
-5. set page index for page control
 
         self.aPageControl.currentPage = currentIndex
         self.aMessageLabel.text = photoSliderManager.displayMessageAtIndex(currentIndex)
